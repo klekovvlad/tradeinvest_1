@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20230112013103">
+    <link rel="icon" href="img/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.min.css?_v=20230112154147">
     <title>Главная</title>
 </head>
 <body>
@@ -26,18 +27,44 @@
             </div>
         </a>
         <nav class="menu">
-            <a href="#">Главная</a>
-            <a href="#">Преимущества</a>
-            <a href="#">Виды кредита</a>
-            <a href="#">Этапы работ</a>
-            <a href="#">Калькулятор</a>
+            <a href="/">Главная</a>
+            <a href="/#advanced">Преимущества</a>
+            <a href="/#needs">Виды кредита</a>
+            <a href="/#steps">Этапы работ</a>
+            <a href="/#calc">Калькулятор</a>
         </nav>
+        <div class="mobile__menu-btn"></div>
         <div class="header__promo">
             <span class="bold">Внимание:</span>
             <span>Только <span class="today"></span> получите кредит под 10.9% годовых</span>
         </div>
     </div>
 </header>
+
+<div class="mobile">
+    <div class="mobile__menu">
+        <div class="mobile__menu-close"><span></span><span></span></div>
+        <a href="/" class="logo">
+            <img src="img/icons/logo.svg" alt="">
+            <div class="logo__text">
+                <span>Трейд Инвест</span>
+                <span class="small">центр кредитования</span>
+            </div>
+        </a>
+        <nav class="menu">
+            <a href="/">Главная</a>
+            <a href="/#advanced">Преимущества</a>
+            <a href="/#needs">Виды кредита</a>
+            <a href="/#steps">Этапы работ</a>
+            <a href="/#calc">Калькулятор</a>
+        </nav>
+        <div class="mobile__menu-contacts">
+            <a href="mailto:mail@mail.ru" class="mail">mail@mail.ru</a>
+            <a href="tel:+79999999999" class="phone">+7 (999) 999-99-99</a>
+        </div>
+    </div>
+    <div class="mobile__overlay"></div>
+</div>
     
 <div class="main">
     <div class="main__wrapper">
@@ -45,13 +72,13 @@
         <h2>Кредит наличными, одобрим в кратчайшие сроки! На любые цели! Быстро и без отказов. Работаем на результат Кредит безработным, без справок, без поручителей, без предоплат!</h2>
         <a href="/" class="main__btn">Получить предложение</a>
     </div>
-    <button class="main__calc">Рассчитать условия</button>
+    <a href="#calc" class="main__calc">Рассчитать условия</a>
     <div class="main__bg"></div>
     <picture><source srcset="img/main-abstr.webp" type="image/webp"><img class="main__abstr" src="img/main-abstr.png" alt=""></picture>
 </div>
 
 <div class="container">
-    <section class="advanced">
+    <section id="advanced" class="advanced">
         <h2 class="title">Выгодные условия для кредитования</h2>
         <h3 class="subtitle">Кредит для граждан под 10% годовых</h3>
         <div class="advanced__wrapper">
@@ -80,7 +107,7 @@
     </section>
 </div>
 
-<section class="needs">
+<section id="needs" class="needs">
     <div class="container">
         <div class="needs__wrapper">
             <div class="needs__header">
@@ -170,7 +197,7 @@
     </div>
 </section>
 
-<section class="steps">
+<section id="steps" class="steps">
     <div class="container">
         <div class="steps__wrapper">
             <h2 class="title">Как мы работаем?</h2>
@@ -185,21 +212,21 @@
                 </div>
                 <div class="steps__item">
                     <div class="steps__item-img">
-                        <picture><source srcset="img/step/1.webp" type="image/webp"><img src="img/step/1.jpg" alt=""></picture>
+                        <picture><source srcset="img/step/2.webp" type="image/webp"><img src="img/step/2.jpg" alt=""></picture>
                         <div class="steps__header">Консультация <div class="icon"></div></div>
                     </div>
                     <div class="steps__item-text">В течении 15 минут вам позвонит наш менеджер, проконсультирует по условиям, ответит на все вопросы.</div>
                 </div>
                 <div class="steps__item">
                     <div class="steps__item-img">
-                        <picture><source srcset="img/step/1.webp" type="image/webp"><img src="img/step/1.jpg" alt=""></picture>
+                        <picture><source srcset="img/step/3.webp" type="image/webp"><img src="img/step/3.jpg" alt=""></picture>
                         <div class="steps__header">Договор <div class="icon"></div></div>
                     </div>
                     <div class="steps__item-text">Мы заключаем официальный договор без мелкого шрифта и дополнительных условий</div>
                 </div>
                 <div class="steps__item">
                     <div class="steps__item-img">
-                        <picture><source srcset="img/step/1.webp" type="image/webp"><img src="img/step/1.jpg" alt=""></picture>
+                        <picture><source srcset="img/step/4.webp" type="image/webp"><img src="img/step/4.jpg" alt=""></picture>
                         <div class="steps__header">Получение <div class="icon"></div></div>
                     </div>
                     <div class="steps__item-text">Получаете ваши деньги удобным способом</div>
@@ -209,7 +236,7 @@
     </div>
 </section>
 
-<section class="calc">
+<section id="calc" class="calc">
     <div class="container">
         <h2 class="title">Онлайн калькулятор займа</h2>
         <h3 class="subtitle">Легко и быстро расчитайте вашу выгоду онлайн</h3>
@@ -348,6 +375,6 @@
     </div>
 </footer>
 
-<script src="js/app.min.js?_v=20230112013103"></script>
+<script src="js/app.min.js?_v=20230112154147"></script>
 </body>
 </html>

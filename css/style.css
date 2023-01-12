@@ -1,26 +1,18 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: icomoon;
-  font-display: swap;
-  src: url("../fonts/icomoon.woff2") format("woff2"), url("../fonts/icomoon.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Manrope;
-  font-display: swap;
-  src: url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: Manrope;
   font-display: swap;
   src: url("../fonts/Manrope-Bold.woff2") format("woff2"), url("../fonts/Manrope-Bold.woff") format("woff");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: icomoon;
+  font-display: swap;
+  src: url("../fonts/icomoon.woff2") format("woff2"), url("../fonts/icomoon.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -36,6 +28,14 @@
   font-family: Montserrat;
   font-display: swap;
   src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -75,6 +75,7 @@ body {
   font-weight: 400;
   color: #1a1c23;
   background: #f7f1eb;
+  position: relative;
 }
 
 .logo {
@@ -290,6 +291,18 @@ span.red {
   padding-left: 40px;
   font-size: 18px;
   color: #1a1c23;
+}
+
+.mobile {
+  display: none;
+}
+
+.mobile__menu-btn {
+  display: none;
+}
+
+.mobile__menu {
+  display: none;
 }
 
 .main {
@@ -801,13 +814,14 @@ span.red {
 }
 
 .steps__item-img {
-  max-height: 300px;
+  min-height: 300px;
   position: relative;
   pointer-events: none;
 }
 
 .steps__item-img img {
-  max-height: 300px;
+  min-height: 300px;
+  min-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -1103,7 +1117,7 @@ span.red {
 
 .calc__nav-item:nth-child(1)::after {
   font-family: icomoon;
-  color: #fff;
+  color: #1a1c23;
   font-size: 30px;
   content: "\e906";
   position: absolute;
@@ -1115,7 +1129,7 @@ span.red {
 
 .calc__nav-item:nth-child(2)::after {
   font-family: icomoon;
-  color: #fff;
+  color: #1a1c23;
   font-size: 30px;
   content: "\e903";
   position: absolute;
@@ -1127,7 +1141,7 @@ span.red {
 
 .calc__nav-item:nth-child(3)::after {
   font-family: icomoon;
-  color: #fff;
+  color: #1a1c23;
   font-size: 30px;
   content: "\e904";
   position: absolute;
@@ -1165,6 +1179,10 @@ span.red {
 
 .calc__nav-active::before {
   transform: translate(-50%, -50%) scale(1);
+}
+
+.calc__nav-active::after {
+  color: #fff !important;
 }
 
 .calc__nav-active span {
@@ -1537,12 +1555,12 @@ span.red {
 
   .header .logo {
     grid-row-start: 1;
-    background: linear-gradient(180deg, rgb(138, 15, 61) 0%, rgb(207, 23, 60) 100%);
+    background: linear-gradient(90deg, rgb(138, 15, 61) 0%, rgb(207, 23, 60) 100%);
   }
 
   .header__promo {
     grid-column-start: span 2;
-    background: linear-gradient(0deg, rgb(138, 15, 61) 0%, rgb(207, 23, 60) 100%);
+    background: linear-gradient(90deg, rgb(138, 15, 61) 0%, rgb(207, 23, 60) 100%);
   }
 
   .header .menu {
@@ -1634,13 +1652,13 @@ span.red {
   }
 
   .steps__item-img {
-    max-height: 240px;
+    min-height: 240px;
     position: relative;
     pointer-events: none;
   }
 
   .steps__item-img img {
-    max-height: 240px;
+    min-height: 240px;
     min-width: 100%;
   }
 
@@ -1727,13 +1745,14 @@ span.red {
 
   .header .logo {
     grid-row-start: 1;
-    background: linear-gradient(180deg, rgb(138, 15, 61) 0%, rgb(207, 23, 60) 100%);
+    background: linear-gradient(90deg, rgb(138, 15, 61) 0%, rgb(207, 23, 60) 100%);
     padding: 30px 0px;
   }
 
   .header__promo {
     padding: 5px 0px;
     flex-direction: column;
+    background: linear-gradient(90deg, rgb(138, 15, 61) 0%, rgb(207, 23, 60) 100%);
   }
 
   .header__promo span.bold {
@@ -1753,6 +1772,170 @@ span.red {
 
   .header .menu {
     display: none;
+  }
+
+  .mobile__menu-btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    position: relative;
+  }
+
+  .mobile__menu-btn:before {
+    font-family: icomoon;
+    color: #cf173c;
+    font-size: 40px;
+    content: "\e90b";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .mobile {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: 0.4s all ease;
+    z-index: 900;
+  }
+
+  .mobile__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 900;
+    background: rgba(0, 0, 0, 0.5);
+    transition: 0.4s all ease;
+  }
+
+  .mobile__menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    background: #cf173c;
+    z-index: 1000;
+    padding: 90px 20px;
+    transform: translateX(-100%);
+    transition: 0.4s 0.4s all ease;
+  }
+
+  .mobile__menu .logo {
+    margin-bottom: 50px;
+  }
+
+  .mobile__menu .menu a {
+    display: block;
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 0px;
+    font-size: 18px;
+    position: relative;
+  }
+
+  .mobile__menu .menu a:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .mobile__menu .menu a::before {
+    content: "\e900";
+    font-family: icomoon;
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    background: #1a1c23;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile__menu-contacts {
+    margin-top: 50px;
+  }
+
+  .mobile__menu-contacts a {
+    display: block;
+    color: #fff;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .mobile__menu-contacts a::before {
+    content: "";
+    font-family: icomoon;
+    font-size: 14px;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile__menu-contacts a:first-child::before {
+    content: "\e907";
+  }
+
+  .mobile__menu-contacts a:last-child::before {
+    content: "\e905";
+  }
+
+  .mobile__menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .mobile__menu-close span {
+    width: 20px;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .mobile__menu-close span:first-child {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .mobile__menu-close span:last-child {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .mobile-active {
+    transform: translateX(0);
+  }
+
+  .mobile-active .mobile__menu {
+    transform: translateX(0);
   }
 
   .main {
@@ -1799,10 +1982,11 @@ span.red {
   }
 
   .advanced__icon {
-    width: 100px;
-    height: 100px;
-    padding: 25px 0px;
+    width: 120px;
+    height: 120px;
+    padding: 30px 0px;
     font-size: 1em;
+    background-size: 100px 100px;
   }
 
   .needs__wrapper {
@@ -1868,7 +2052,7 @@ span.red {
 
   .calc__main .calc__input span {
     font-size: 14px;
-    min-width: 100px;
+    min-width: 120px;
     margin-left: 10px;
   }
 
@@ -1881,7 +2065,7 @@ span.red {
 
   .calc__main .calc__input-persent span {
     font-size: 14px;
-    min-width: 100px;
+    min-width: 120px;
     margin-left: 10px;
   }
 
@@ -1975,6 +2159,20 @@ span.red {
 
   .faq .subtitle {
     margin-bottom: 30px;
+  }
+
+  .faq__question {
+    padding: 15px 50px 15px 50px;
+  }
+
+  .faq__question::before {
+    left: 20px;
+  }
+
+  .faq__answer {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 14px;
   }
 
   .footer__wrapper {
