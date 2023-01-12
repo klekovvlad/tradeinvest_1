@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.min.css?_v=20230113015735">
+    <title>Форма</title>
+</head>
+<body>
+
+<header class="header">
+    <div class="header__top">
+        <div class="header__contacts">
+            <a href="mailto:mail@mail.ru" class="mail">mail@mail.ru</a>
+            <a href="tel:+79999999999" class="phone">+7 (999) 999-99-99</a>
+        </div>
+        <a href="/form.html" class="header__btn">Получить</a>
+    </div>
+    <div class="header__wrapper">
+        <a href="/" class="logo">
+            <img src="img/icons/logo.svg" alt="">
+            <div class="logo__text">
+                <span>Трейд Инвест</span>
+                <span class="small">центр кредитования</span>
+            </div>
+        </a>
+        <nav class="menu">
+            <a href="/">Главная</a>
+            <a href="/#advanced">Преимущества</a>
+            <a href="/#needs">Виды кредита</a>
+            <a href="/#steps">Этапы работ</a>
+            <a href="/#calc">Калькулятор</a>
+        </nav>
+        <div class="mobile__menu-btn"></div>
+        <div class="header__promo">
+            <span class="bold">Внимание:</span>
+            <span>Только <span class="today"></span> получите кредит под 10.9% годовых</span>
+        </div>
+    </div>
+</header>
+
+<div class="mobile">
+    <div class="mobile__menu">
+        <div class="mobile__menu-close"><span></span><span></span></div>
+        <a href="/" class="logo">
+            <img src="img/icons/logo.svg" alt="">
+            <div class="logo__text">
+                <span>Трейд Инвест</span>
+                <span class="small">центр кредитования</span>
+            </div>
+        </a>
+        <nav class="menu">
+            <a href="/">Главная</a>
+            <a href="/#advanced">Преимущества</a>
+            <a href="/#needs">Виды кредита</a>
+            <a href="/#steps">Этапы работ</a>
+            <a href="/#calc">Калькулятор</a>
+        </nav>
+        <div class="mobile__menu-contacts">
+            <a href="mailto:mail@mail.ru" class="mail">mail@mail.ru</a>
+            <a href="tel:+79999999999" class="phone">+7 (999) 999-99-99</a>
+        </div>
+    </div>
+    <div class="mobile__overlay"></div>
+</div>
+
+<section class="form">
+    <div class="container">
+        <div class="form__wrapper">
+            <h2 class="title">Заполните форму для получения кредита от 10% годовых</h2>
+            <h3 class="subtitle">Выдаем кредит на любые цели, автокредит, ипотека, рефинансирование. Быстро и безопасно. Лучшие условия для кредитования на рынке.</h3>
+            <p class="safe">Гарантируем конфиденциальность данных</p>
+            <form action="" autocomplete="off">
+                <div class="form__item">
+                    <label for="name">Ваше имя
+                        <input type="text" id="name" placeholder="Владимир" required>
+                    </label>
+                </div>
+                <div class="form__item">
+                    <label for="phone">Ваш номер телефона
+                        <input type="tel" id="phone" placeholder="+7 (999) 999 99 99" required>
+                    </label>
+                </div>
+                <div class="form__item">
+                    <label for="city">Город
+                        <input type="text" id="city" placeholder="Москва">
+                    </label>
+                </div>
+                <div class="form__item">
+                    <label for="summ">Сумма кредита
+                        <input type="tel" id="summ" placeholder="1.000.000" autocomplete="off">
+                    </label>
+                </div>
+                <div class="form__item">
+                    <label for="goal">Цель кредита
+                        <input type="tel" id="goal" placeholder="Выберите цель" autocomplete="off">
+                    </label>
+                    <ul class="goal__list">
+                        <li class="goal__list-item">Потребительский кредит</li>
+                        <li class="goal__list-item">Автокредит</li>
+                        <li class="goal__list-item">Ипотечное кредитование</li>
+                        <li class="goal__list-item">Рефинансирование кредита</li>
+                        <li class="goal__list-item">Кредит на ремонт</li>
+                        <li class="goal__list-item">Кредит под залог</li>
+                        <li class="goal__list-item">Другой</li>
+                    </ul>
+                </div>
+                <div class="form__item">
+                    <label for="rules">
+                        Согласен с политикой по обработке данных
+                        <input type="checkbox" id="rules">
+                    </label>
+                </div>
+                <button type="submit">Получить</button>
+            </form>
+        </div>
+    </div>
+    <picture><source srcset="img/main-abstr.webp" type="image/webp"><img src="img/main-abstr.png" alt="" class="form__img"></picture>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__col">
+                <a href="/" class="logo">
+                    <img src="img/icons/logo.svg" alt="">
+                    <div class="logo__text">
+                        <span>Трейд Инвест</span>
+                        <span class="small">центр кредитования</span>
+                    </div>
+                </a>
+                <span class="copyright">Copyright © 2022 Трейд Инвест</span>
+            </div>
+            <div class="footer__col">
+                <a href="tel:+79999999999" class="phone">+7 (999) 999-99-99</a>
+                <span class="work-time">Круглосуточно</span>
+                <a href="/form.html" class="footer__btn">Заполнить анкету</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/app.min.js?_v=20230113015735"></script>
+</body>
+</html>
